@@ -12,15 +12,19 @@ namespace ConsoleApp3
                 Console.Write("반의 성적 관리표입니다.");
 
                 int[] scores = new int[10];
+                int total = 0;
+
                 for(int student = 0; student<10; student++)
                 {
                     Console.Write(student);
                     Console.WriteLine("번의 성적을 입력하세요.");
                     scores[student] = int.Parse(Console.ReadLine());
+                    total = total + scores[student];
                 }
+
                 Console.Write(classcount);
                 Console.Write("반의 평균은 ");
-                Console.Write((scores[0] + scores[1] + scores[2] + scores[3] + scores[4] + scores[5] + scores[6] + scores[7] + scores[8] + scores[9]) / 10);
+                Console.Write(total / 10);
                 Console.WriteLine("입니다.");
             }
            
